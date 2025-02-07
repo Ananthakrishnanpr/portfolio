@@ -7,3 +7,14 @@ implemented:
 ->some css and html tags
 challenges:
 ->no challenges faced
+
+day2:6/2/2025
+learn:
+ External CSS & FontAwesome Icons
+Links an external CSS file.
+Creating a navigation menu with <ul class="navlist">.
+ <li> and <a> are used for clickable menu items.
+Div Containers for Layout
+left-container and right-container are used for layout structure.
+challenges:
+using left-container and right-container for layout structure
