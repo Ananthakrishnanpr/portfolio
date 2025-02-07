@@ -1,0 +1,9 @@
+day1: 5/2/2025
+learn: 
+->to create a git account
+->commit files created
+->some basic css and html tags
+implemented:
+->some css and html tags
+challenges:
+->no challenges faced
