@@ -18,3 +18,11 @@ Div Containers for Layout
 left-container and right-container are used for layout structure.
 challenges:
 using left-container and right-container for layout structure
+day3:7/2/2025
+learn:
+Uses Flexbox to arrange icons vertically
+<span> -> to highlight the name with a different color.
+<nav> 
+Used for the navigation menu
+challenges:
+to arrange icons vertically

@@ -1,25 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Alegreya", serif;
-    font-optical-sizing: auto;
-    font-weight: 400; 
-    font-style: normal;
+    font-family: "Poppins", sans-serif;
 }
 
-.portfolio-container {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    padding-top: 15vh;
-} 
+body {
+    background-color: #0d0d0d;
+    color: white;
+}
 
 .navlist {
     display: flex;
-    gap: 3.5rem;
+    gap: 3rem;
     height: 15vh;
     width: 100%;
     justify-content: center;
@@ -43,72 +38,89 @@
     transition: color 0.3s ease-in-out;
 }
 
-.navlist li a:hover {
-    color: #3877ff;
+.navlist li a:hover, .navlist li a.active {
+    color: #00aaff;
+    border-bottom: 2px solid #00aaff;
 }
 
-.left-container, .right-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.left-container {
-    background-color: #262525;
-    width: 70%;
-    padding-left: 3rem;
-    flex-direction: column; 
-    justify-content: center; 
-}
-
-.right-container {
-    background: #3877ff;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-container img {
-    max-width: 80%;
-    border-radius: 50%;
-}
-
-.icons {
+.social-icons {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.icons .fa-brands {
+.social-icons .fa-brands, .social-icons .fa-solid {
     color: #bbb;
     font-size: 1.5rem;
     transition: color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.icons .fa-brands:hover {
-    color: #fff;
-    font-size: 1.7rem;
+.social-icons .fa-brands:hover, .social-icons .fa-solid:hover {
+    color: #00aaff;
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
+.left-container {
+    width: 50%;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00aaff, #0055ff);
+    padding: 10px;
+    box-shadow: 0 0 30px #00aaff;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
 }
 
 .content .intro {
     font-size: 1.5rem;
-    color: #fff;
 }
 
-.content .intro span {
-    color: #5db9ee;
+.highlight {
+    color: #00aaff;
 }
 
 .content h1 { 
     font-size: 4rem;
-    color: #5db9ee;
+    color: #00aaff;
 }
 
 .content .detail {
     font-size: 1.1rem;
-    color: #fff;
+    color: #aaa;
     max-width: 38rem;
     margin: 1.1rem 0 3rem 0;
     line-height: 1.8rem;
@@ -131,43 +143,43 @@
 }
 
 .hire-me {
-    background-color: #5db9ee;
+    background-color: #00aaff;
     color: white;
 }
 
 .hire-me:hover {
-    background-color: #3877ff;
+    background-color: #0055ff;
 }
 
 .view-project {
     background-color: transparent;
     color: white;
-    border: 2px solid #5db9ee;
+    border: 2px solid #00aaff;
 }
 
 .view-project:hover {
-    background-color: #5db9ee;
+    background-color: #00aaff;
     color: white;
 }
 
 @media screen and (max-width: 768px) {
     .portfolio-container {
         flex-direction: column;
+        padding: 2rem;
     }
 
     .left-container, .right-container {
         width: 100%;
         height: auto;
-        padding: 2rem;
         text-align: center;
     }
 
-    .icons {
-        flex-direction: row;
-        justify-content: center;
+    .social-icons {
+        left: 1rem;
     }
 
-    .right-container img {
-        max-width: 60%;
+    .profile-image {
+        width: 180px;
+        height: 180px;
     }
 }
